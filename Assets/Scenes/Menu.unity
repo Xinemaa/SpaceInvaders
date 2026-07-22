@@ -130,7 +130,9 @@ GameObject:
   - component: {fileID: 26727786}
   - component: {fileID: 26727785}
   - component: {fileID: 26727784}
-  m_Layer: 0
+  - component: {fileID: 26727787}
+  - component: {fileID: 26727788}
+  m_Layer: 3
   m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,15 +210,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ef2c5bfcd2a981d4a82bd3ea369181e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.38, y: 1.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &26727786
 Transform:
@@ -227,14 +229,60 @@ Transform:
   m_GameObject: {fileID: 26727783}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.01266, y: -0, z: 16.22762}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.55, z: 6.79}
+  m_LocalScale: {x: 2.17, y: 2.17, z: 2.17}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2000318425}
   - {fileID: 477152002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &26727787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26727783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8832e850d48c3954d8d81004c5fc01a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GazeButton
+  onPointerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onPointerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onPointerClick:
+    m_PersistentCalls:
+      m_Calls: []
+  onPointerEnterAnimationName: OnEnter
+  onPointerExitAnimationName: OnExit
+  onPointerClickAnimationName: OnClick
+  animator: {fileID: 26727784}
+--- !u!65 &26727788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26727783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6119955, y: 1.536955, z: 0.4327941}
+  m_Center: {x: -0.033561096, y: 0.043477714, z: 0.023719462}
 --- !u!1 &119244688
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +944,7 @@ GameObject:
   - component: {fileID: 477152002}
   - component: {fileID: 477152004}
   - component: {fileID: 477152003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,9 +960,9 @@ Transform:
   m_GameObject: {fileID: 477152001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.755, y: 0.201, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 26727786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -932,14 +980,14 @@ TextMesh:
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
-  m_TabSize: 4
+  m_TabSize: 3
   m_FontSize: 0
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: ec1a20b93e96ca4409ddb80097149efc, type: 3}
+  m_Font: {fileID: 12800000, guid: 42b018f2b4ca7524d85ea344de6e4b65, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4292318942
 --- !u!23 &477152004
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -965,7 +1013,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec1a20b93e96ca4409ddb80097149efc, type: 3}
+  - {fileID: 2100000, guid: 42b018f2b4ca7524d85ea344de6e4b65, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2021,7 +2069,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: a62d620f800e21d48840deb6799db853, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4292254926
 --- !u!23 &1518033082
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2096,7 +2144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 87cb1bf201eaf2c4cbf1f2543c93e0c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.779188
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87cb1bf201eaf2c4cbf1f2543c93e0c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2308,7 +2356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000318425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
