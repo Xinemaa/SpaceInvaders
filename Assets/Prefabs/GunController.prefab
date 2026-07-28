@@ -190,6 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5216719534111117728}
   - component: {fileID: 3978875625546963795}
+  - component: {fileID: 4725321453511469213}
   m_Layer: 0
   m_Name: 'RightGun '
   m_TagString: Untagged
@@ -212,6 +213,7 @@ Transform:
   m_Children:
   - {fileID: 2509679570281930255}
   - {fileID: 1893787291890754486}
+  - {fileID: 7991780102139741774}
   m_Father: {fileID: 3696441433338218203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3978875625546963795
@@ -236,6 +238,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4725321453511469213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3633491159905775151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1817e4701c0edc846b1602fb08820433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  animator: {fileID: 3978875625546963795}
+  bulletPivot: {fileID: 7991780102139741774}
+  bulletPrefab: {fileID: 3112239213322161353, guid: 3f80dceb081ca47439aa7fd52ec5cc7d, type: 3}
+  gunDamage: 20
 --- !u!1 &3806700664780568653
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4684720061174493494}
   - component: {fileID: 2064087402844174176}
+  - component: {fileID: 6401244217943252139}
   m_Layer: 0
   m_Name: LeftGun
   m_TagString: Untagged
@@ -358,6 +377,7 @@ Transform:
   m_Children:
   - {fileID: 5964813005224194396}
   - {fileID: 8786881823573560015}
+  - {fileID: 7374453437825593772}
   m_Father: {fileID: 3696441433338218203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2064087402844174176
@@ -382,6 +402,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6401244217943252139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4215682313829244054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1817e4701c0edc846b1602fb08820433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  animator: {fileID: 2064087402844174176}
+  bulletPivot: {fileID: 7374453437825593772}
+  bulletPrefab: {fileID: 3112239213322161353, guid: 3f80dceb081ca47439aa7fd52ec5cc7d, type: 3}
+  gunDamage: 20
 --- !u!1 &6159663628861727991
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +508,37 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6626022991990854294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7991780102139741774}
+  m_Layer: 0
+  m_Name: BulletPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7991780102139741774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6626022991990854294}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.31, y: 0, z: 6.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5216719534111117728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6892851243814995249
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3696441433338218203}
+  - component: {fileID: 5169389215779644869}
   m_Layer: 0
   m_Name: GunController
   m_TagString: Untagged
@@ -504,4 +572,51 @@ Transform:
   - {fileID: 4684720061174493494}
   - {fileID: 5216719534111117728}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5169389215779644869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892851243814995249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518943be02b29a9409a9c678b97d3771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunController
+  guns:
+  - {fileID: 6401244217943252139}
+  - {fileID: 4725321453511469213}
+  playerCamera: {fileID: 0}
+--- !u!1 &7813920307182820453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7374453437825593772}
+  m_Layer: 0
+  m_Name: BulletPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7374453437825593772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7813920307182820453}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.59, y: 0, z: 5.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4684720061174493494}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

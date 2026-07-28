@@ -534,7 +534,6 @@ GameObject:
   - component: {fileID: 238624151}
   - component: {fileID: 238624150}
   - component: {fileID: 238624149}
-  - component: {fileID: 238624155}
   m_Layer: 0
   m_Name: DesktopCamera
   m_TagString: Untagged
@@ -690,21 +689,6 @@ Transform:
   - {fileID: 219273230}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &238624155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238624148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e349e4b44016746b22786dad2a7339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GazePointer
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1 &389255504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208458d3120e11043ab61449a77b4fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
-  fadeAnimator: {fileID: 0}
+  fadeAnimator: {fileID: 1639093224}
   onSceneStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -2226,6 +2210,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1639093224 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 881808644242354303, guid: 36ad5580446b1154fbb0c98393df05d1, type: 3}
+  m_PrefabInstance: {fileID: 8626434511709325376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1657979977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2572,7 +2561,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6679913285857043756, guid: f8e74ce91faf77d40a15d41f06a1b6be, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
