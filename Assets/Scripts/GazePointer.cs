@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GazePointer : MonoBehaviour
 {
-   [SerializeField]
+[SerializeField]
 private LayerMask interactableLayer;
 private EventSystem eventSystem;
 private PointerEventData pointerEventData;
