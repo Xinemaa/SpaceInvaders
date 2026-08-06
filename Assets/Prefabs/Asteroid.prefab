@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 239944355086798743}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 104.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -782,10 +782,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8373128271602421115}
+  - component: {fileID: 1726210299272783659}
   - component: {fileID: 3694870812364905895}
   - component: {fileID: 1962318089686029486}
   - component: {fileID: 7333967387267911745}
-  - component: {fileID: 1726210299272783659}
   - component: {fileID: 5853806558037885234}
   - component: {fileID: 697276295598237753}
   m_Layer: 0
@@ -812,6 +812,38 @@ Transform:
   - {fileID: 4598249503512323379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1726210299272783659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395573557080142480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8482496405075fd4c8d709181b776342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  healthSlider: {fileID: 5843429139485598052}
+  maxHealth: 100
+  onReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5853806558037885234}
+        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &3694870812364905895
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -882,38 +914,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1726210299272783659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8395573557080142480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8482496405075fd4c8d709181b776342, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  healthSlider: {fileID: 5843429139485598052}
-  maxHealth: 100
-  onReceiveDamage:
-    m_PersistentCalls:
-      m_Calls: []
-  onDie:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5853806558037885234}
-        m_TargetAssemblyTypeName: Asteroid, Assembly-CSharp
-        m_MethodName: Destroy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &5853806558037885234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,9 +929,11 @@ MonoBehaviour:
   target: {fileID: 0}
   destroyAnimationName: Destroy
   destroySoundName: AsteroidExplode
+  appearSoundName: AsteroidComes
   rotateScript: {fileID: 2338459959275745503}
-  speed: 20
+  speed: 5
   damage: 20
+  distanceToTarget: 100
 --- !u!135 &697276295598237753
 SphereCollider:
   m_ObjectHideFlags: 0
