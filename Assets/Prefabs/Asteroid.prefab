@@ -928,11 +928,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Asteroid
   target: {fileID: 0}
   destroyAnimationName: Destroy
-  destroySoundName: AsteroidExplode
+  destroySoundName: AsteroidExplote
   appearSoundName: AsteroidComes
-  rotateScript: {fileID: 2338459959275745503}
-  speed: 5
+  speed: 6.16
   damage: 20
+  rotateScript: {fileID: 2338459959275745503}
   distanceToTarget: 100
 --- !u!135 &697276295598237753
 SphereCollider:
