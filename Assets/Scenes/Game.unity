@@ -742,6 +742,51 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &401376142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401376144}
+  - component: {fileID: 401376143}
+  m_Layer: 0
+  m_Name: InstantiateParticles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &401376143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401376142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f9fd4b4dedb174eb79a07e684e17c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pool
+  prefab: {fileID: 3975517725270145754, guid: 9c5134a373912c44e8af50fa7047cee4, type: 3}
+--- !u!4 &401376144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401376142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.43516, y: 0, z: 10.35903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428490684
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +819,7 @@ Transform:
   m_Children:
   - {fileID: 507179972}
   - {fileID: 1443189089}
+  - {fileID: 1484689480}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &428490686
@@ -800,7 +846,22 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Faden
+          m_StringArgument: Fade
+          m_BoolArgument: 0
+        m_CallState: 2
+  onShowLoseScreen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1958002068}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: StopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   textMeshes:
@@ -823,7 +884,6 @@ GameObject:
   - component: {fileID: 507179972}
   - component: {fileID: 507179975}
   - component: {fileID: 507179974}
-  - component: {fileID: 507179973}
   m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
@@ -846,18 +906,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 428490685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &507179973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507179971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e858f9314cf4903a8b6b60d93e3437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!102 &507179974
 TextMesh:
   serializedVersion: 3
@@ -2379,7 +2427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   healthSlider: {fileID: 366931635}
-  maxHealth: 200
+  maxHealth: 150
   onReceiveDamage:
     m_PersistentCalls:
       m_Calls:
@@ -2539,6 +2587,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1958002068}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MusicaDeJuego
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1368934086
 Transform:
   m_ObjectHideFlags: 0
@@ -2667,7 +2727,6 @@ Transform:
   m_Children:
   - {fileID: 1283982409}
   - {fileID: 1129293880}
-  - {fileID: 1484689480}
   m_Father: {fileID: 428490685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1443189090
@@ -2850,13 +2909,13 @@ Transform:
   m_GameObject: {fileID: 1484689479}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5300293, y: 0, z: 0}
+  m_LocalPosition: {x: 3500.08, y: -0.31, z: -5764.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 39085378}
   - {fileID: 1739653732}
-  m_Father: {fileID: 1443189089}
+  m_Father: {fileID: 428490685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1484689481
 BoxCollider:
@@ -2921,7 +2980,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Boton
+          m_StringArgument: MenuBotton
           m_BoolArgument: 0
         m_CallState: 2
   onPointerEnterAnimationName: OnEnter
@@ -3326,7 +3385,31 @@ MonoBehaviour:
   levelManager: {fileID: 11400000, guid: 1b5564798d7b66944b20a8af11ea4740, type: 2}
   onEnemyDestroy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 401376143}
+        m_TargetAssemblyTypeName: Pool, Assembly-CSharp
+        m_MethodName: InstantiateObjectOn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1958002068}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AsteroidExplote
+          m_BoolArgument: 0
+        m_CallState: 2
   target: {fileID: 1331326656}
   onAllEnemiesDestroyed:
     m_PersistentCalls:
@@ -3612,3 +3695,4 @@ SceneRoots:
   - {fileID: 2027598350}
   - {fileID: 1331326656}
   - {fileID: 428490685}
+  - {fileID: 401376144}
